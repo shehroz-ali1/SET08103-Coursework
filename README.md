@@ -5,8 +5,8 @@ This application provides a comprehensive reporting system for the World databas
 
 ## Requirements Met Table
 
-| ID | Requirement | Status | Screenshot Proof |
-|---|---|---|---|
+| ID | Requirement | Status |
+|---|---|---|
 | 1 | All the countries in the world organised by largest population to smallest. | Done | 
 | 2 | All the cities in the world organised by largest population to smallest. | Done | 
 | 3 | All the capital cities in the world organised by largest population to smallest. | Done | 
