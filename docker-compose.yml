@@ -5,15 +5,16 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: password
       MYSQL_DATABASE: world
+    volumes:
+      - ./world.sql:/docker-entrypoint-initdb.d/world.sql
     ports:
       - "33060:3306"
-    # Note: In the real local setup, we will map the SQL dump file provided by the org here
 
   app:
     build: .
     depends_on:
       - db
     environment:
-      - DB_URL=jdbc:mysql://db:3306/world?useSSL=false&allowPublicKeyRetrieval=false
+      - DB_URL=jdbc:mysql://db:3306/world?useSSL=false&allowPublicKeyRetrieval=true
       - DB_USER=root
       - DB_PASS=password
